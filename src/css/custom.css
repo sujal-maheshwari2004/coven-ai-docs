@@ -1,0 +1,129 @@
+/* ─── Fonts ──────────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@700;900&family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* ─── Coven Docs — global theme ─────────────────────────────────────────── */
+
+:root {
+  --ifm-color-primary: #9d4edd;
+  --ifm-color-primary-dark: #8a36d0;
+  --ifm-color-primary-darker: #7c2cc4;
+  --ifm-color-primary-darkest: #5f1fa0;
+  --ifm-color-primary-light: #b066f0;
+  --ifm-color-primary-lighter: #c280f5;
+  --ifm-color-primary-lightest: #d9aafa;
+  --ifm-code-font-size: 93%;
+  --docusaurus-highlighted-code-line-bg: rgba(157, 78, 221, 0.1);
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  --ifm-heading-font-family: 'Cinzel', serif;
+  --ifm-heading-font-weight: 700;
+  --ifm-navbar-shadow: none;
+  --coven-ember: #ff6b35;
+  --coven-amber: #ffb347;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #c77dff;
+  --ifm-color-primary-dark: #b35df7;
+  --ifm-color-primary-darker: #9d4edd;
+  --ifm-color-primary-darkest: #7c2cc4;
+  --ifm-color-primary-light: #d9a0ff;
+  --ifm-color-primary-lighter: #e6bfff;
+  --ifm-color-primary-lightest: #f3dfff;
+  --docusaurus-highlighted-code-line-bg: rgba(199, 125, 255, 0.1);
+
+  --ifm-background-color: #030307;
+  --ifm-background-surface-color: #08080f;
+  --ifm-navbar-background-color: rgba(3, 3, 7, 0.8);
+  --ifm-footer-background-color: #020205;
+
+  --ifm-color-emphasis-0:   #030307;
+  --ifm-color-emphasis-100: #09090f;
+  --ifm-color-emphasis-200: #0f0f1c;
+  --ifm-color-emphasis-300: #1a1a2e;
+  --ifm-color-emphasis-400: #282845;
+  --ifm-color-emphasis-600: #7070a0;
+  --ifm-color-emphasis-700: #9898c8;
+  --ifm-color-emphasis-800: #ccccee;
+  --ifm-color-emphasis-900: #e8e8ff;
+
+  --coven-glow:          rgba(199, 125, 255, 0.4);
+  --coven-glow-soft:     rgba(157,  78, 221, 0.12);
+  --coven-border:        rgba(199, 125, 255, 0.1);
+  --coven-border-active: rgba(199, 125, 255, 0.4);
+  --coven-surface:       #08080f;
+  --coven-surface-raised:#0e0e1a;
+}
+
+[data-theme='light'] {
+  --coven-glow:          rgba(124, 44, 196, 0.2);
+  --coven-glow-soft:     rgba(124, 44, 196, 0.06);
+  --coven-border:        rgba(124, 44, 196, 0.15);
+  --coven-border-active: rgba(124, 44, 196, 0.45);
+  --coven-surface:       #f5f0ff;
+  --coven-surface-raised:#ffffff;
+}
+
+/* ─── Headings ───────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel', serif;
+}
+
+/* ─── Navbar ─────────────────────────────────────────────── */
+.navbar {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--coven-border);
+}
+
+.navbar__brand {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ─── Sidebar ────────────────────────────────────────────── */
+.menu__link--active {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+/* ─── Code ───────────────────────────────────────────────── */
+code {
+  border-radius: 4px;
+  font-family: var(--ifm-font-family-monospace);
+}
+
+[data-theme='dark'] .prism-code {
+  background: #06060e !important;
+  border: 1px solid var(--coven-border);
+  border-radius: 8px;
+}
+
+/* ─── Tables ─────────────────────────────────────────────── */
+table th { background: var(--ifm-color-emphasis-100); }
+[data-theme='dark'] table { border: 1px solid var(--coven-border); }
+
+/* ─── Admonitions ─────────────────────────────────────────  */
+.admonition { border-radius: 8px; }
+
+/* ─── Footer ─────────────────────────────────────────────── */
+[data-theme='dark'] .footer {
+  border-top: 1px solid var(--coven-border);
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────── */
+[data-theme='dark'] ::-webkit-scrollbar       { width: 5px; height: 5px; }
+[data-theme='dark'] ::-webkit-scrollbar-track  { background: #030307; }
+[data-theme='dark'] ::-webkit-scrollbar-thumb  { background: #1a1a2e; border-radius: 3px; }
+[data-theme='dark'] ::-webkit-scrollbar-thumb:hover { background: var(--coven-border-active); }
+
+/* ─── Selection ──────────────────────────────────────────── */
+[data-theme='dark'] ::selection {
+  background: rgba(157, 78, 221, 0.35);
+  color: #fff;
+}
+
+html { scroll-behavior: smooth; }
