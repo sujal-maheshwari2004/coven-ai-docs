@@ -11,7 +11,7 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://coven-ai-docs.vercel.app',
   baseUrl: '/',
 
   organizationName: 'sujal-maheshwari2004',
